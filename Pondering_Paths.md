@@ -37,3 +37,21 @@ Here is your flag:
 pwn.college{sflv6SC5-hf778Tboxnv6oMN1ix.dZDN1QDL1IDM2czW}
 hacker@paths~position-thy-self:/$
 ```
+
+## Position elsewhere
+
+This was the exact same as the above. I wondered if there was anything new in the text given in the challenges, but I didn't notice anything. The commands we had to use were the same too. Nothing much to add
+
+```bash
+hacker@paths~position-elsewhere:~$ /challenge/run
+Incorrect...
+You are not currently in the / directory.
+Please use the `cd` utility to change directory appropriately.
+hacker@paths~position-elsewhere:~$ cd /
+hacker@paths~position-elsewhere:/$ /challenge/run
+Correct!!!
+/challenge/run is an absolute path, invoked from the right directory!
+Here is your flag:
+pwn.college{Y7hFHlfro9YnYrLug8rDSnF1WxS.ddDN1QDL1IDM2czW}
+hacker@paths~position-elsewhere:/$
+```

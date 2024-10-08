@@ -8,7 +8,7 @@ The challenge introduces us to how to access a file, directory, or program in Li
 hacker@paths~the-root:~$ /pwn
 BOOM!!!
 Here is your flag:
-pwn.college{0UsrXFl9wLV76m_VTitsncZBPaO.dhzN5QDL1IDM2czW}
+pwn.college{_}
 ```
 
 ## Programs and Absolute Paths
@@ -18,11 +18,11 @@ The challenge "digs" deeper into the file system by showing us the concept of ab
 hacker@paths~program-and-absolute-paths:~$ /challenge/run
 Correct!!!
 /challenge/run is an absolute path! Here is your flag:
-pwn.college{4NOJXhcUUapJwWVh7jz6mu89cCE.dVDN1QDL1IDM2czW}
+pwn.college{_}
 ```
 
 ## Position Thyself
-We learn about a new command, ```cd```, whose full form is "***c***urrent ***d***irectory" (A Better and more obvious way to say it would be "***c***urrent working ***d***irectory). We use ```cd``` to change where we are in the filesystem. The syntax is ```cd /directory_name```. I had to go to the ```/``` directory in this challenge, which initially confused me. I didn;t see that, and I thoguth we had to "guess" the directory or the directory was hidden in the challenge. I read the error message carefully and understood I had to run ```cd /``` command, and then run ```challenge/run```. This gives us our key
+We learn about a new command, ```cd```, whose full form is "***c***urrent ***d***irectory" (A Better and more obvious way to say it would be "***c***urrent working ***d***irectory). We use ```cd``` to change where we are in the filesystem. The syntax is ```cd /directory_name```. I had to go to the ```/``` directory in this challenge, which initially confused me. I didn't see that, and I thought we had to "guess" the directory or the directory was hidden in the challenge. I read the error message carefully and understood I had to run the ```cd /``` command and then run ```challenge/run```. This gives us our key
 
 ```bash
 hacker@paths~position-thy-self:~$ /challenge/run
@@ -34,13 +34,13 @@ hacker@paths~position-thy-self:/$ /challenge/run
 Correct!!!
 /challenge/run is an absolute path, invoked from the right directory!
 Here is your flag:
-pwn.college{sflv6SC5-hf778Tboxnv6oMN1ix.dZDN1QDL1IDM2czW}
+pwn.college{_}
 hacker@paths~position-thy-self:/$
 ```
 
 ## Position elsewhere
 
-This was the exact same as the above. I wondered if there was anything new in the text given in the challenges, but I didn't notice anything. The commands we had to use were the same too. Nothing much to add
+This was the same as the above. I wondered if there was anything new in the text given in the challenges, but I didn't notice anything. The commands we had to use were the same too. Nothing much to add
 
 ```bash
 hacker@paths~position-elsewhere:~$ /challenge/run
@@ -52,6 +52,23 @@ hacker@paths~position-elsewhere:/$ /challenge/run
 Correct!!!
 /challenge/run is an absolute path, invoked from the right directory!
 Here is your flag:
-pwn.college{Y7hFHlfro9YnYrLug8rDSnF1WxS.ddDN1QDL1IDM2czW}
+pwn.college{_}
 hacker@paths~position-elsewhere:/$
+```
+
+## Position yet elsewhere
+
+We can traverse the filesystem more quickly by writing down the required directory. There are technically 2 solutions, using the ```cd``` command to traverse through each directory, or the shorter ```cd /var/lib/apts/lists``` command, though it might end up being harder to keep track of when traversing a more complex system. Nevertheless, the solution was trivially found by running the above command.
+```bash
+hacker@paths~position-yet-elsewhere:~$ /challenge/run
+Incorrect...
+You are not currently in the /var/lib/apt/lists directory.
+Please use the `cd` utility to change directory appropriately.
+hacker@paths~position-yet-elsewhere:~$ cd /var/lib/apt/lists
+hacker@paths~position-yet-elsewhere:/var/lib/apt/lists$ /challenge/run
+Correct!!!
+/challenge/run is an absolute path, invoked from the right directory!
+Here is your flag:
+pwn.college{_}
+hacker@paths~position-yet-elsewhere:/var/lib/apt/lists$
 ```

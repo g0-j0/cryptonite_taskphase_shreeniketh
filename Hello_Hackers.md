@@ -6,7 +6,7 @@ Ran the ```hello``` command to get the key.
 ```bash
 hacker@hello~intro-to-commands:~$ hello
 Success! Here is your flag:
-pwn.college{csQ_y-_4lgzpF7CALPvwD0P0MRY.ddjNyUDL1IDM2czW}
+pwn.college{_}
 ```
 
 ## Intro to arguments
@@ -24,6 +24,6 @@ Ran ```hello hackers``` to get the key; here, ```hello``` is the command, ```hac
 ```bash
 hacker@hello~intro-to-arguments:~$ hello hackers
 Success! Here is your flag:
-pwn.college{sx7mC8YRy-e2V8BdHkVJgIGfs_L.dhjNyUDL1IDM2czW}
+pwn.college{_}
 hacker@hello~intro-to-arguments:~$
 ```

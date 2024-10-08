@@ -1,19 +1,26 @@
 # Intro to Commands
 ## Intro to Commands
-ran ```hello``` command to get the key
+
+Ran the ```hello``` command to get the key.
+
 ```bash
 hacker@hello~intro-to-commands:~$ hello
 Success! Here is your flag:
 pwn.college{csQ_y-_4lgzpF7CALPvwD0P0MRY.ddjNyUDL1IDM2czW}
 ```
+
 ## Intro to arguments
-ran ```echo hello``` , ```echo``` command prints the argument to the terminal
+
+Ran ```echo hello```, ```echo``` command prints the argument to the terminal.
+
 ```bash
 hacker@hello~intro-to-commands:~$ echo hello
 hello
 hacker@hello~intro-to-commands:~$
 ```
-ran ```hello hackers``` to get the key, here,```hello``` is the command, ```hackers``` is the arguments
+
+Ran ```hello hackers``` to get the key; here, ```hello``` is the command, ```hackers``` is the argument.
+
 ```bash
 hacker@hello~intro-to-arguments:~$ hello hackers
 Success! Here is your flag:

@@ -20,3 +20,20 @@ Correct!!!
 /challenge/run is an absolute path! Here is your flag:
 pwn.college{4NOJXhcUUapJwWVh7jz6mu89cCE.dVDN1QDL1IDM2czW}
 ```
+
+## Position Thyself
+We learn about a new command, ```cd```, whose full form is "***c***urrent ***d***irectory" (A Better and more obvious way to say it would be "***c***urrent working ***d***irectory). We use ```cd``` to change where we are in the filesystem. The syntax is ```cd /directory_name```. I had to go to the ```/``` directory in this challenge, which initially confused me. I didn;t see that, and I thoguth we had to "guess" the directory or the directory was hidden in the challenge. I read the error message carefully and understood I had to run ```cd /``` command, and then run ```challenge/run```. This gives us our key
+
+```bash
+hacker@paths~position-thy-self:~$ /challenge/run
+Incorrect...
+You are not currently in the / directory.
+Please use the `cd` utility to change directory appropriately.
+hacker@paths~position-thy-self:~$ cd /
+hacker@paths~position-thy-self:/$ /challenge/run
+Correct!!!
+/challenge/run is an absolute path, invoked from the right directory!
+Here is your flag:
+pwn.college{sflv6SC5-hf778Tboxnv6oMN1ix.dZDN1QDL1IDM2czW}
+hacker@paths~position-thy-self:/$
+```

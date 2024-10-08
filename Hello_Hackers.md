@@ -1,4 +1,4 @@
-# Intro to Commands
+# Hello Hackers!
 ## Intro to Commands
 
 Ran the ```hello``` command to get the key.

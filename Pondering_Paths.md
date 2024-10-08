@@ -74,7 +74,7 @@ hacker@paths~position-yet-elsewhere:/var/lib/apt/lists$
 ```
 
 # Implicite relative paths, from /
-Relative paths are a different way of traversing the filesystem. While absolute paths are based on the root, relative paths are based on your position. Lets say you are in the ```a``` directory, to traverse to ```\a\b\c\d```, you can run ```b\c\d``` to run the file ```d```. I was slightly confused because I kept running the ```/challenges/run``` command, but then I quickly realised my mistake.
+Relative paths are a different way of traversing the filesystem. While absolute paths are based on the root, relative paths are based on your position. Lets say you are in the ```a``` directory, to traverse to ```\a\b\c\d```, you can run ```b\c\d``` to run the file ```d```. I was slightly confused because I kept running the ```/challenges/run``` command, but I quickly realised my mistake.
 
 ```bash
 hacker@paths~implicit-relative-paths-from-:~$ cd /
@@ -99,13 +99,27 @@ hacker@paths~explicit-relative-paths-from-:/$
 ```
 
 ## implicit relative paths
-In Linux, we cannot run a file implicitly, i.e. if we are in the ```/challenges``` directory, we cannot use the command ```run```. Instead, we have to use the ```./``` command; in the above example, we would use ```./run``` command. This is a safety feature in Linux to prevent accidentally running programs you didn't want to.
+In Linux, we cannot run a file implicitly, i.e. if we are in the ```/challenges``` directory, we cannot use the command ```run```. Instead, we have to use the ```./``` command; in the above example, we would use the ```./run``` command. This is a safety feature in Linux to prevent accidentally running programs you didn't want to.
 ```bash
 hacker@paths~implicit-relative-path:/$ cd /challenge
 hacker@paths~implicit-relative-path:/challenge$ ./run
 Correct!!!
 ./run is a relative path, invoked from the right directory!
 Here is your flag:
-pwn.college{4sNE_ZFds_2KmxvUtCwILQwolCK.dFTN1QDL1IDM2czW}
+pwn.college{_}
 hacker@paths~implicit-relative-path:/challenge$
 ```
+
+## home sweet home
+The final challenge for the module. Here, we look into the ```~``` command, which indicates the home directory. In the challenge, we had  to pass an argument (which confused me at first. I thought the question wanted me to run /challenges/run as an argument for a particular directory, which made no sense.). I realized I could just go to the ```/``` directory and use the ```~``` command to refer to the home directory.
+
+```bash
+hacker@paths~home-sweet-home:/$ challenge/run ~/a
+Writing the file to /home/hacker/a!
+... and reading it back to you:
+pwn.college{4Qn5qz3NXWTmOAr3tz5K1nXSEUW.dNzM4QDL1IDM2czW}
+hacker@paths~home-sweet-home:/$
+```
+
+## End
+Overall, I found this module to be very comfortable. I was stuck only at a few places and max for a few minutes, and the solutions were easy. This could be because of me ieng kinda used to cmd commands (though calling it comfortable would be a stretch

@@ -25,7 +25,7 @@ hacker@commands~more-catting-practice:~$
 ```
 
 ## ```grep```ping for a needle in a haystack
-```grep``` is a command on Linux that searches for a string in a file. Let's say I have a ```abc.txt``` file with millions of lines, and I need to find out the string that has ```hello``` in it; I run the command ```grep abc.txt``` to figure out the entire string. Actually running the command will provide a better understanding of how it works.
+```grep``` is a command on Linux that searches for a string in a file. Let's say I have a ```abc.txt``` file with millions of lines, and I need to find out the string that has ```hello``` in it; I run the command ```grep abc.txt``` to figure out the entire string. Actually, running the command will provide a better understanding of how it works.
 ```bash
 hacker@commands~grepping-for-a-needle-in-a-haystack:~$ grep 'pwn.college' /challenge/data.txt
 pwn.college{_}
@@ -49,4 +49,12 @@ hacker@commands~touching-files:~$ /challenge/run
 Success! Here is your flag:
 pwn.college{_}
 hacker@commands~touching-files:~$
+```
+## removing files
+```rm``` command removes a file. The syntax is: ```rm filename```. We cannot keep every single file and must delete some files. Hence, the ```rm``` command. In this challenge, we have to remove a delete_me file and run the file /challenge/check
+```bash
+hacker@commands~removing-files:~$ rm delete_me
+hacker@commands~removing-files:~$ /challenge/check
+Excellent removal. Here is your reward:
+pwn.college{_}
 ```

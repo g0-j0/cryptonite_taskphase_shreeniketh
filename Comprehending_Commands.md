@@ -31,7 +31,7 @@ hacker@commands~grepping-for-a-needle-in-a-haystack:~$ grep 'pwn.college' /chall
 pwn.college{_}
 ```
 ## listing files
-the ```ls``` command lists the directories and files in a directory. ```ls```lists the directories and files in the home directory, and ```ls /directory_name``` lists the directories in that specific directory. In the challenge, we have to list the files in the ```challenges``` directory and get the key from there, as the key is stored in a randomly named file.
+The ```ls``` command lists the directories and files in a directory. ```ls```lists the directories and files in the home directory, and ```ls /directory_name``` lists the directories in that specific directory. In the challenge, we have to list the files in the ```challenges``` directory and get the key from there, as the key is stored in a randomly named file.
 ```bash
 hacker@commands~listing-files:~$ ls /challenge
 3934-renamed-run-7294  DESCRIPTION.md
@@ -39,4 +39,14 @@ hacker@commands~listing-files:~$ /challenge/3934-renamed-run-7294
 Yahaha, you found me! Here is your flag:
 pwn.college{_}
 hacker@commands~listing-files:~$
+```
+## touching files
+The ```touch``` command creates a new file in the directory, the syntax being ```touch filename```. In the challenge, we have to create a pwn and college file in the ```/tmp``` directory to run the program. We do this by running ```touch /tmp/pwn``` and ```touch /tmp/college```.
+```bash
+hacker@commands~touching-files:~$ touch /tmp/pwn
+hacker@commands~touching-files:~$ touch /tmp/college
+hacker@commands~touching-files:~$ /challenge/run
+Success! Here is your flag:
+pwn.college{_}
+hacker@commands~touching-files:~$
 ```

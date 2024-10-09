@@ -14,4 +14,12 @@ pwn.college{_}
 ```
 
 ## more ```cat```ting practice
-In this challenge, we use cat commands to get more comfortable with them. The flag is located in some random directory, and it is our job to figure where it is.
+In this challenge, we use ```cat``` commands to get more comfortable with them. The flag is located in the ```/lib/ecl/flag```, and we must use the ```cat``` to get the key along with the absolute path. The solution is hence ```cat /lib/ecl/flag```.
+```bash
+You cannot use the 'cd' command in this level, and must retrieve the flag by
+absolute path. Plus, I hid the flag in a different directory! You can find it
+in the file /lib/ecl/flag. Go cat it out **without** cding into that directory!
+hacker@commands~more-catting-practice:~$ cat /lib/ecl/flag
+pwn.college{_}
+hacker@commands~more-catting-practice:~$
+```

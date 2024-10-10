@@ -45,5 +45,20 @@ pwn.college{_}
 We can have multiple globs in the same line to check for various things simultaneously. It's pretty blatant. Hence, there is nothing to add, so I'll move on to the solution.
 
 ```bash
+hacker@globbing~mixing-globs:/challenge/files$ /challenge/run [cpe]*
+You got it! Here is your flag!
+pwn.college{_}
+hacker@globbing~mixing-globs:/challenge/files$
+```
 
+Originally, I thought we had to run the command, so that took some extra time. Later, I ran it in a relative path, giving the output at least. All I had to refine was what I had to write relatively.
+
+## Exclusionary globbing
+
+```!``` and ```^``` essentially act as an inverter, telling the computer not to find what you are searching for with globs.
+
+```bash
+hacker@globbing~exclusionary-globbing:/challenge/files$ /challenge/run [!pwn]*
+You got it! Here is your flag!
+pwn.college{_}
 ```

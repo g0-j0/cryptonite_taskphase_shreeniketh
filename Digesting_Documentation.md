@@ -96,3 +96,23 @@ The secret value is: 808
 hacker@man~helpful-programs:~$ /challenge/challenge -g 808
 Correct usage! Your flag: pwn.college{_}
 ```
+## ```help``` for Builtins
+the ```help``` command can be used if the command/program you are trying to get the description for and details about is a shell builtin. We run the ```help``` command with ```challengee```.
+```bash
+hacker@man~help-for-builtins:~$ help challenge
+challenge: challenge [--fortune] [--version] [--secret SECRET]
+    This builtin command will read you the flag, given the right arguments!
+
+    Options:
+      --fortune         display a fortune
+      --version         display the version
+      --secret VALUE    prints the flag, if VALUE is correct
+
+    You must be sure to provide the right value to --secret. That value
+    is "sKX-yp6W".
+hacker@man~help-for-builtins:~$ challenge --secret sKX-yp6W
+Correct! Here is your flag!
+pwn.college{sKX-yp6WOr44cOtoSAAWOW_qVh8.dRTM5QDL1IDM2czW}
+
+hacker@man~help-for-builtins:~$
+```

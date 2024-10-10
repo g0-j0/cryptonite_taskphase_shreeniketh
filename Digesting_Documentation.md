@@ -68,3 +68,12 @@ hacker@man~searching-manuals:~$ /challenge/challenge --jwvy
 Initializing...
 Correct usage! Your flag: pwn.college{_}
 ```
+
+## Searching for manual
+
+This is the first time I had to search online to see how to search for the manual. I got confused due to the rather verbose language (although understandably so) and needed a shorter description. I found a better and easier version of the argument on GeeksforGeeks and understood that the ```-k``` command searches across all the man pages. from this, I saw the command ```chkinauypo```. I ran the ```man chkinauypo``` command, and it worked. I got the syntax of the argument
+
+ ```bash
+hacker@man~searching-for-manuals:~$ /challenge/challenge --chkina 468
+Correct usage! Your flag: pwn.college{_}
+```

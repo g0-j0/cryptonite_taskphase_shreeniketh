@@ -55,7 +55,7 @@ Originally, I thought we had to run the command, so that took some extra time. L
 
 ## Exclusionary globbing
 
-```!``` and ```^``` essentially act as an inverter, telling the computer not to find what you are searching for with globs.
+```!``` and ```^``` essentially act as an inverter, telling the computer not to find what you are searching for with globs. ```[^pwn]``` essentially searches the directory to find the files NOT starting with p, w or n. 
 
 ```bash
 hacker@globbing~exclusionary-globbing:/challenge/files$ /challenge/run [!pwn]*

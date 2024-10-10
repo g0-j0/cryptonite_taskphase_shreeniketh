@@ -58,3 +58,13 @@ Correct usage! Your flag: pwn.college{_}
 hacker@man~reading-manuals:~$
 ```
 
+## Searching manual
+
+You can use the ```/``` command to search, ```n``` to go next, ```N``` to go to the previous search. The ```?``` command searches backwards. I used the / command to search the word "flag" to find an argument to use.
+```bash
+hacker@man~searching-manuals:~$ man challenge
+--jwvy This argument will give you the flag!
+hacker@man~searching-manuals:~$ /challenge/challenge --jwvy
+Initializing...
+Correct usage! Your flag: pwn.college{_}
+```

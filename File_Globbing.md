@@ -51,7 +51,7 @@ pwn.college{_}
 hacker@globbing~mixing-globs:/challenge/files$
 ```
 
-Originally, I thought we had to run the command, so that took some extra time. Later, I ran it in a relative path, giving the output at least. All I had to refine was what I had to write relatively.
+Originally, I thought we had to run the command absolutely, so that took some extra time. Later, I ran it in a relative path, giving the output at least. All I had to refine was what I had to write relatively.
 
 ## Exclusionary globbing
 

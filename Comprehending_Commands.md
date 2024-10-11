@@ -60,7 +60,7 @@ pwn.college{_}
 ```
 
 ## hidden files
-```ls``` command doesn't list all of the files, there are certain hidden files, typically starting with  a ```.```. that do not show up in a typical ```ls```  command. We need to add the flag ```=a```. In the challenge, we have to find the hidden file, and hence the flag.
+```ls``` command doesn't list all of the files, there are certain hidden files, typically starting with  a ```.```. that do not show up in a typical ```ls```  command. We need to add the flag ```-a```. In the challenge, we have to find the hidden file, and hence the flag.
 
 ```bash
 hacker@commands~hidden-files:/$ cd

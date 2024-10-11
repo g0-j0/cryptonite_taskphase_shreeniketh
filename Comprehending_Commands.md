@@ -25,7 +25,7 @@ hacker@commands~more-catting-practice:~$
 ```
 
 ## ```grep```ping for a needle in a haystack
-```grep``` is a command on Linux that searches for a string in a file. Let's say I have a ```abc.txt``` file with millions of lines, and I need to find out the string that has ```hello``` in it; I run the command ```grep abc.txt``` to figure out the entire string. Actually, running the command will provide a better understanding of how it works.
+```grep``` is a command on Linux that searches for a string in a file. Let's say I have a ```abc.txt``` file with millions of lines, and I need to find out the string that has ```hello``` in it; I run the command ```grep 'hello' abc.txt``` to figure out the entire string. Actually, running the command will provide a better understanding of how it works.
 ```bash
 hacker@commands~grepping-for-a-needle-in-a-haystack:~$ grep 'pwn.college' /challenge/data.txt
 pwn.college{_}
